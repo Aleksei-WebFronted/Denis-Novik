@@ -1,12 +1,35 @@
-$kurale: 'Kurale', serif
+$al: 'Alexandria', sans-serif
 $os: "Open Sans", sans-serif
 
-*,
-*::before,
-*::after 
-    box-sizing: border-box
+$wrap: 1445px
+$container: 972px 
+$mc: 0 auto
+$bg: #F6F6F6 //Цвет фона
+$white: #fff
+$tb: #070707 //Цвет тексты черный
+$ts: #828282 //Цвет тексты серый
+$text: 18px 
 
-body
-    font-family: $os
-
-                                                
+@mixin flex($jc, $ai)
+    display: flex
+    flex-wrap: wrap
+    justify-content: $jc
+    align-items: $ai
+body 
+    background: $white
+    font-family: $al
+    color: $ts
+    font-size: $text
+.wrapper
+    max-width: $wrap
+    margin: $mc
+.container
+    max-width: $container
+    margin: $mc
+    padding: 0 15px
+h2
+    font-size: 34px
+    line-height: 42px
+    color: $tb
+    text-align: center
+    
