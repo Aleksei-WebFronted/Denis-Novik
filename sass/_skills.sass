@@ -1,20 +1,26 @@
 .skills
-    padding-top: 90px
-    padding-bottom: 110px
-    min-height: 610px
+    padding: 91px 0 111px 0
     &__title
         margin-bottom: 70px
-    &__text
-        margin-bottom: 85px
+    &__subtitle
         text-align: center
+        margin-bottom: 83px
+        line-height: 22px
+        color: $tb
     &__adobe
-        @include flex(space-between, center)
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__card
         text-align: center
-        img
-            margin-bottom: 25px
-        p
-            margin-bottom: 40px
-.content__adobe
-    max-width: 170px
+        width: 170px
+        height: 210px            
+    &__card-img
+        margin-bottom: 24px
+        max-width: 100%
+        height: auto
+    &__card-subtitle
+        margin-bottom: 40px            
 .checked 
     color: $tb
+
