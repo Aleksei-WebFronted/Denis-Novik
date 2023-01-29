@@ -18,6 +18,10 @@
         display: block
         margin: $mc
         margin-bottom: 85px
+        cursor: pointer
+        transition: .3s
+        &:hover
+            background: #4d4c4c
     &__social
         margin-bottom: 45px
         display: flex
@@ -26,4 +30,14 @@
     &__social-text
         text-align: center
         
-            
+@media (max-width: 375px)
+    .contacts
+        padding: 85px 0
+        &__title
+            margin-bottom: 27px
+        &__subtitle
+            margin-bottom: 40px
+        &__btn
+            padding: 13px 100px
+        &__social
+            gap: 50px
