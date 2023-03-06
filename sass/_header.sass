@@ -40,7 +40,17 @@
     &__img-mobile
         display: none
 
-@media (max-width: 375px)
+@media (max-width: 768px)
+    .skills__adobe
+        flex-wrap: wrap
+    .skills__card
+        margin-bottom: 100px
+        align-items: center
+        justify-content: center
+        &:last-child
+            margin-bottom: 0
+
+@media (max-width: 575px)
     .header
         padding: 65px 0 90px 0
         &__img
@@ -62,19 +72,48 @@
     .menu
         padding: 0        
         &__list
-            display: none
+            //display: none
+            flex-direction: column
+            gap: 70px
+            font-size: 34px
+            line-height: 42px
+            align-items: start
 
-@media (max-width: 768px)
-    .skills__adobe
-        flex-wrap: wrap
-    .skills__card
-        margin-bottom: 100px
-        align-items: center
-        justify-content: center
-        &:last-child
-            margin-bottom: 0
+    .burger
+        display: inline-block
+        cursor: pointer
+        position: fixed
+        right: 30px
+        top: 70px
+        &__line
+            width: 35px
+            height: 4px
+            background-color: #000000
+            margin: 4px 0
+            transition: .3s
+    .change .burger__line:nth-child(1)
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px)
+        transform: rotate(-45deg) translate(-4px, 5px)
+        background-color: #828282
+    .change .burger__line:nth-child(2)
+        opacity: 0
+    .change .burger__line:nth-child(3)
+        -webkit-transform: rotate(45deg) translate(-8px, -8px)
+        transform: rotate(45deg) translate(-8px, -8px)
+        background-color: #828282
 
-@media (max-width: 575px)
+    #nav 
+        overflow: hidden
+        background: #ffffff
+        height: 100vh
+        max-height: 0px
+        
+    /*открытие меню*/
+    #nav.open
+        height: 100vh
+        max-height: 100vh
+    
+@media (max-width: 375px)
     .header
         padding: 65px 0 90px 0
         &__img
